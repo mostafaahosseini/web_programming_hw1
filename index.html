@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>دستگرمی اول - تگ با حساب و کتاب</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>دستگرمی اول - تگ با حساب و کتاب</h1>
+  <p>مقادیر را در ورودی‌ها وارد کنید تا نتیجه در تگ <code>formula</code> نمایش داده شود.</p>
+
+  <!-- مثال اول -->
+  <div class="formula-container">
+    <label for="fee">قیمت واحد:</label>
+    <input type="text" id="fee" placeholder="مثال: 20">
+
+    <label for="count">تعداد:</label>
+    <input type="text" id="count" placeholder="مثال: 4">
+
+    <label for="discount">تخفیف:</label>
+    <input type="text" id="discount" placeholder="مثال: 30">
+
+    <!-- تگ سفارشی فرمول با یک Attribute به نام evaluator -->
+    <formula evaluator="count * fee - discount"></formula>
+  </div>
+
+  <!-- مثال دوم -->
+  <div class="formula-container">
+    <label for="number1">عدد اول:</label>
+    <input type="text" id="number1" placeholder="مثال: 10">
+
+    <label for="number2">عدد دوم:</label>
+    <input type="text" id="number2" placeholder="مثال: 5">
+
+    <!-- میانگین دو عدد -->
+    <formula evaluator="(number1 + number2) / 2"></formula>
+  </div>
+
+  <!-- مثال سوم -->
+  <div class="formula-container">
+    <label for="width">عرض مستطیل (واحد دلخواه):</label>
+    <input type="text" id="width" placeholder="مثال: 3">
+
+    <label for="height">طول مستطیل (واحد دلخواه):</label>
+    <input type="text" id="height" placeholder="مثال: 7">
+
+    <!-- مساحت مستطیل -->
+    <formula evaluator="width * height"></formula>
+  </div>
+
+  <!-- اسکریپت اصلی -->
+  <script src="app.js"></script>
+</body>
+</html>
